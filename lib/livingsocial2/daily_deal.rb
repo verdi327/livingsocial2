@@ -17,7 +17,7 @@ module Livingsocial2Api
 
     def self.deal_for(location)
       client.data(location).map do |deal|
-        attributes = { image_url:     deal['image_url'],
+        attributes = { image_url:      deal['image_url'],
                        url:            deal['original_url'],
                        description:    deal['subtitle'],
                        title:          deal['title'],

@@ -21,7 +21,7 @@ module Livingsocial2Api
     end
 
     def clean_location(location)
-      location.gsub("-", "+")
+      location.gsub("-", " ")
     end
   end
 end
