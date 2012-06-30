@@ -15,7 +15,7 @@ module Livingsocial2Api
       response = @connection.get do |req|
         req.url "/api/v1/deals"
         req.headers['Accepts'] = 'application/json'
-        req.params['divison_name'] = clean_location(location)
+        req.params['division_name'] = clean_location(location)
       end
       JSON.parse(response.body)
     end
