@@ -45,9 +45,9 @@ module Livingsocial2Api
 
     def self.find_deals_for(deal_type)
       if deal_type.downcase == 'all'
-        @deals ||= LivingSocialDeal
+        LivingSocialDeal
       else
-        @deals ||= LivingSocialDeal.where(deal_type: deal_type)
+        LivingSocialDeal.where(deal_type: deal_type)
       end
     end
 
@@ -56,7 +56,7 @@ module Livingsocial2Api
       valid_deals.map { |deal| new(deal.attributes) }
     end
 
-    def self.find_near(deal_type, lat, long, distance)
+    def self.find_near(deal_type, lat, long, distance=3)
       valid_deals = find_deals_for(DEAL_TYPES[deal_type]).where(:market_location => { "$near" => [lat, long], "$maxDistance" => distance.fdiv(69) })
       valid_deals.map { |deal| new(deal.attributes) }
     end
