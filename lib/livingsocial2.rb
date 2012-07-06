@@ -1,6 +1,5 @@
+require "livingsocial2/mongo"
 require "livingsocial2/version"
-require "livingsocial2/client"
-require "livingsocial2/daily_deal"
-require "livingsocial2/national_deal"
-require 'faraday'
-require 'json'
+require "livingsocial2/deal"
+require 'mongoid'
+
