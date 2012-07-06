@@ -15,6 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Livingsocial2::VERSION
 
-  gem.add_runtime_dependency("faraday")
   gem.add_development_dependency('rspec')
+  gem.add_development_dependency('mongoid')
+  gem.add_development_dependency('bson_ext')
 end
