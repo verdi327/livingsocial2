@@ -1,6 +1,6 @@
 # Livingsocial2
 
-This is the official unoffical ruby gem for Livingsocial.  The gem is a wrapper for livingsocial's atom feed.  We scrape the atom feed every 3 hours, so the deals should current.  There are some inconsistency with info on some deals, but this stems from inconsistencies within the atom feed - not much we can do there! The gem is very lightweight with only two files - Mongo.rb and Deal.rb.  Mongo creates a connection to the mongo db that stores the gathered deals and Deal returns deal instances based on your entered criteria.
+This is the official unoffical ruby gem for Livingsocial.  The gem is a wrapper for livingsocial's atom feed.  We scrape the atom feed every 3 hours, so the deals should be current.  There are some inconsistency with info on some deals, but this stems from inconsistencies within the atom feed - not much we can do there! The gem is very lightweight with only two files - Mongo.rb and Deal.rb.  Mongo creates a connection to the mongo db that stores the gathered deals and Deal returns deal instances based on your entered criteria.
 
 
 ## Installation
@@ -32,6 +32,9 @@ Livingsocial2::Deal.find_near(deal_type, lat, long, distance) #=> returns a coll
 ### Example call
 Livingsocial2::Deal.find_near(:all, 40.7518481, -73.97551399999999, 1)
 
+Distance is the radius desired, measured in miles.  For example, the above example is asking for all the deals within a 1 mile radius of the passed in location (Lexington, NY).
+
+If no distance is specified - it will default to 3 miles.
 ### What's the deal with deal_type
 deal_type allows you to specify what LS vertical you are interested in.  Currently, the atom feed supplies 4 types of deals.
 #### 1. Local Deals
@@ -45,12 +48,6 @@ deal_type allows you to specify what LS vertical you are interested in.  Current
 #### 3. :family #=> family deals
 #### 4. :gourmet #=> gourmet deals
 #### 5. :all #=> combination of all the above
-
-Distance is the radius desired, measured in miles.  For example, the above example is asking for all the deals within a 1 mile radius of the passed in location (Lexington, NY).
-
-If no distance is specified - it will default to 3 miles.
-
-
 
 ## Contributing
 
