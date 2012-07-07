@@ -1,4 +1,4 @@
-module Livingsocial2Api
+module Livingsocial2
   class Deal
     DEAL_TYPES = {  family:  'FamiliesDeal',
                     local:   'LocalDeal',
@@ -44,7 +44,7 @@ module Livingsocial2Api
     end
 
     def self.find_deals_for(deal_type)
-      if deal_type.downcase == 'all'
+      if deal_type == 'all'
         LivingSocialDeal
       else
         LivingSocialDeal.where(deal_type: deal_type)
