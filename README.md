@@ -60,6 +60,35 @@ deal_type allows you to specify what LS vertical you are interested in.  Current
 
     :all #=> combination of all the above
 
+### A Deal instance will include the following attributes
+    :ls_id
+    :published
+    :link
+    :title
+    :long_title
+    :deal_type
+    :merchandise_type
+    :market_id
+    :market_name
+    :market_location, type: Array
+    :featureType
+    :country_code
+    :subtitle
+    :offer_ends_at
+    :price
+    :value
+    :savings
+    :order_count
+    :merchant_type
+    :image_url
+    :categories
+    :sold_out
+    :national
+    :description
+    :details
+    :content
+    :merchant
+
 ## Contributing
 
 1. Fork it
