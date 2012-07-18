@@ -16,6 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Livingsocial2::VERSION
 
   gem.add_development_dependency('rspec')
-  gem.add_development_dependency('mongoid')
-  gem.add_development_dependency('bson_ext')
+  gem.add_runtime_dependency('mongoid')
+  gem.add_runtime_dependency('bson_ext')
 end
