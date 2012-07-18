@@ -22,14 +22,16 @@ Or install it yourself as:
 There are currently 2 class level methods for interacting with the gem.
 ### Method 1
 
-    Livingsocial2::Deal.find_by_ls_market(deal_type, market) #=> returns a collection of deals objects that match both the deal_type and the LS market of interest.
+    Livingsocial2::Deal.find_by_ls_market(deal_type, market)
+    #=> returns a collection of deals objects that match both the deal_type and the LS market of interest.
 
 ### Example call
 
     Livingsocial2::Deal.find_by_ls_market(:local, 'Buffalo')
 
 ### Method 2
-    Livingsocial2::Deal.find_near(deal_type, lat, long, distance) #=> returns a collection of deal objects that match the deal type and that are within the specified distance of the lat and long passed in.
+    Livingsocial2::Deal.find_near(deal_type, lat, long, distance)
+    #=> returns a collection of deal objects that match the deal type and that are within the specified distance of the lat and long passed in.
 
 ### Example call
 
